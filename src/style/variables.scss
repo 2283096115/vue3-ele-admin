@@ -1,0 +1,60 @@
+// background
+$backgroundColor: #f9f9f9;
+
+// main
+$mainColor: #3772ff;
+$titleColor: #1d2129;
+$textColor: #5a6787;
+$grayColor: #c3c3c3;
+$iconColor: #86909c;
+
+// header
+$menuText: #4e5969;
+$menuActiveText: #f9f9f9;
+$subMenuActiveText: #fff; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: #fff;
+$menuHover: #4091f7;
+$subMenuBg: #fff;
+$subMenuHover: #fff;
+$subMenuActiveBg: #3772ff;
+$sidebarLogo: #002140;
+$menuTitleHover: #fff;
+$menuActiveBefore: #3772ff;
+$menuHeight: 67px;
+$breadcrumbHeight: 50px;
+
+// 分割线背景色
+$hrBorderBg: #e0e3ea;
+$sideBarWidth: 100px;
+$--el-color-primary: #3772ff;
+
+/* 改变 icon 字体路径变量，必需 */
+// $--font-path: 'node_modules/element-plus/lib/theme-chalk/fonts';
+// @import "node_modules/element-plus/theme-chalk/src/index";
+
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  --el-color-primary: $--el-color-primary;
+  --font-path: $--font-path;
+
+  subMenuActiveBg: $subMenuActiveBg;
+  sidebarLogo: $sidebarLogo;
+  menuTitleHover: $menuTitleHover;
+  menuActiveBefore: $menuActiveBefore;
+  menuHeight: $menuHeight;
+  breadcrumbHeight: $breadcrumbHeight;
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  backgroundColor: $backgroundColor;
+  titleColor: $titleColor;
+  textColor: $textColor;
+  iconColor: $iconColor;
+  sideBarWidth: $sideBarWidth;
+  mainColor: $mainColor;
+}

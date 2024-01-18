@@ -1,0 +1,63 @@
+image: node:18-alpine
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "xxx"
+    # 一下为master分支和dev分支会自动触发cicd
+    # - if: $CI_COMMIT_REF_NAME == "master"
+    # - if: $CI_COMMIT_REF_NAME == "dev"
+
+stages:
+  - package
+  # - test
+  - build
+  - deploy
+
+# 在流水线中使用package.json缓存node_modules,只要package.json内容没变就一直使用缓存
+cache:
+  key:
+    files:
+      - package.json
+  paths:
+    - node_modules
+
+# 定义安装npm包的job
+package:
+  tags:
+    - frontend-test
+  stage: package
+  script:
+    - npm i -g pnpm
+    - pnpm install
+
+# 定义代码验证的job
+# code-lint:
+#   tags:
+#     - frontend
+#   stage: test
+#   script:
+#     - npm run lint
+#   allow_failure: true # 运行失败,代码验证失败后仍然会执行后续job
+
+build:
+  tags:
+    - frontend-test
+  stage: build
+  script:
+    - pnpm build
+  artifacts:
+    paths:
+      - dist
+
+deploy:
+  tags:
+    - frontend-test
+  stage: deploy
+  image: docker
+  script:
+    - if [ $(docker ps -aq --filter name=dpmc-fronted-uat) ]; then docker rm -f $(docker ps -aq --filter name=dpmc-fronted-uat);fi
+    # - docker rmi dpmc-fronted-uat-image:latest
+    - if [ $(docker images -aq --filter reference=dpmc-fronted-uat-image) ]; then docker rmi $(docker images -aq --filter reference=dpmc-fronted-uat-image);fi
+    - docker build -t dpmc-fronted-uat-image .
+    #- if [ $(docker images -q -f dangling=true) ]; then docker rmi $(docker images -q -f dangling=true); fi
+    - docker run -d -p 8009:80 --link dpmc-java-uat:dpmc-java-uat --link dpmc-sap-connect:dpmc-sap-connect --name dpmc-fronted-uat dpmc-fronted-uat-image # 使用新的容器

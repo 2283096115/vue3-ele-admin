@@ -1,0 +1,148 @@
+@import "./variables";
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+.el-dropdown-menu {
+  padding: 0 !important;
+}
+
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+.is-dark {
+  z-index: 9999 !important;
+}
+
+/* 重置 el-button 中 icon 的 margin */
+.reset-margin [class*="el-icon"] + span {
+  margin-left: 2px !important;
+}
+
+/* nprogress 适配 element-plus 的主题色 */
+#nprogress {
+  & .bar {
+    background-color: var(--el-color-primary) !important;
+  }
+
+  & .peg {
+    box-shadow: 0 0 10px var(--el-color-primary),
+      0 0 5px var(--el-color-primary) !important;
+  }
+
+  & .spinner-icon {
+    border-top-color: var(--el-color-primary);
+    border-left-color: var(--el-color-primary);
+  }
+}
+
+/* 全局覆盖element-plus的el-dialog、el-drawer、el-message-box、el-notification组件右上角关闭图标的样式，表现更鲜明 */
+.el-dialog__headerbtn,
+.el-message-box__headerbtn {
+  &:hover {
+    .el-dialog__close {
+      color: var(--el-color-info) !important;
+    }
+  }
+}
+
+.el-icon {
+  &.el-dialog__close,
+  &.el-drawer__close,
+  &.el-message-box__close,
+  &.el-notification__closeBtn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      color: rgb(0 0 0 / 88%) !important;
+      text-decoration: none;
+      background-color: rgb(0 0 0 / 6%);
+    }
+  }
+}
+
+.el-input__inner {
+  height: 40px;
+  line-height: 40px;
+}
+
+.el-form-item__label {
+  height: 40px;
+  line-height: 40px;
+}
+
+.el-button {
+  height: 40px;
+}
+
+.el-date-editor.el-date-editor--daterange.el-input__wrapper.el-range-editor.el-tooltip__trigger.el-tooltip__trigger {
+  height: 40px;
+}
+
+.el-input__wrapper {
+  height: 40px;
+}
+
+// 灰色button
+
+.grey_button {
+  color: $iconColor;
+  background: #f2f3f5;
+  border: $iconColor;
+}
+
+// 绿色button
+.green_button {
+  color: white;
+  background: #59bb49;
+  border: #59bb49;
+
+  &:hover {
+    color: white;
+    background: #8cd281;
+    border: #8cd281;
+  }
+}
+
+.el-tabs__nav-wrap::after {
+  background: #999;
+  opacity: 0.1;
+}
+
+.el-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .el-table__body-wrapper {
+    flex: 1;
+  }
+}

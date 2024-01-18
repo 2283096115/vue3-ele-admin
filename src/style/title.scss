@@ -1,0 +1,20 @@
+.plan-title {
+  position: relative;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1d2129;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    content: "";
+    background: #3772ff;
+    border-radius: 2px;
+    transform: translateY(-50%);
+  }
+}

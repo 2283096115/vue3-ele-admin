@@ -1,0 +1,78 @@
+global:
+  unit: unit
+  version: version
+  pleaseEnter: Please Enter
+  versionRecord: Version record
+  jobNumber: Job number
+  viewDetail: View Detail
+  type: Type
+  remarks: Remarks
+  length: Length
+  deliveryDate: Delivery Date
+  launchOperation: Launch Operation
+buttons:
+  hsLoginOut: LoginOut
+  hsadd: Add
+  query: Query
+  export: Export
+  confirmAssignments: Confirm assignments
+mainPlan:
+  workStation: Work station
+  NCOrderNumber: NC order number
+  finProPartNum: Finished product part number
+  startProductionDate: Start production date
+  rawMaterialPartNumber: Raw material part number
+  AIQORM: Available inventory quantity of raw materials (piece)
+  machineIdleDate: Machine idle date
+  customerNumber: Customer number
+  orderTime: Order time
+  estimatedMaterialTime: Estimated material time
+  customerPartNumber: Customer part number
+  customerProductName: Customer Product Name
+  totalDemand: Total Demand
+  alloyCondition: Alloy condition
+  estimatedUnitWeight: Estimated unit weight(KG)
+  specialRequirements: Special requirements
+order:
+  productMaterialName: Product Material Name
+  configureOrders: Configure Orders
+login:
+  username: Username
+  password: Password
+  verifyCode: VerifyCode
+  remember: Remember Password
+  sure: Sure Password
+  forget: Forget Password?
+  login: Login
+  thirdLogin: Third Login
+  phoneLogin: Phone Login
+  qRCodeLogin: QRCode Login
+  register: Register
+  weChatLogin: WeChat Login
+  alipayLogin: Alipay Login
+  qqLogin: QQ Login
+  weiboLogin: Weibo Login
+  phone: Phone
+  smsVerifyCode: SMS VerifyCode
+  back: Back
+  test: Mock Test
+  tip: After scanning the code, click "Confirm" to complete the login
+  definite: Definite
+  loginSuccess: Login Success
+  registerSuccess: Regist Success
+  tickPrivacy: Please tick Privacy Policy
+  readAccept: I have read it carefully and accept
+  privacyPolicy: Privacy Policy
+  getVerifyCode: Get VerifyCode
+  info: Seconds
+  usernameReg: Please enter username
+  passwordReg: Please enter password
+  verifyCodeReg: Please enter verify code
+  verifyCodeCorrectReg: Please enter correct verify code
+  verifyCodeSixReg: Please enter a 6-digit verify code
+  phoneReg: Please enter the phone
+  phoneCorrectReg: Please enter the correct phone number format
+  passwordRuleReg: The password format should be any combination of 8-18 digits
+  passwordSureReg: Please enter confirm password
+  passwordDifferentReg: The two passwords do not match!
+  passwordUpdateReg: Password has been updated
