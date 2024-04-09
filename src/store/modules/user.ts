@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { store } from "@/store";
 import { userType } from "./types";
-import { router } from "@/router";
+// import { router } from "@/router";
 import { getLogin, refreshTokenApi } from "@/api/user";
 import { UserResult, RefreshTokenResult } from "@/api/user";
 import { setToken, removeToken, sessionKey } from "@/utils/auth";
@@ -46,7 +46,7 @@ export const useUserStore = defineStore({
       this.roles = [];
       removeToken();
       // resetRouter();
-      router.push("/login");
+      // router.push("/login");
     },
     /** 刷新`token` */
     async handRefreshToken(data) {

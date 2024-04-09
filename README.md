@@ -1,10 +1,5 @@
 <h1>使用介绍</h1>
 
-## 配套文档
-
-- [点我查看国内文档站](https://yiming_chang.gitee.io/pure-admin-doc)
-- [点我查看国外文档站](https://pure-admin.github.io/pure-admin-doc)
-
 ## 用法
 
 ### 安装依赖

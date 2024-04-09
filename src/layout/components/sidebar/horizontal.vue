@@ -64,7 +64,7 @@ computed(() => {
 <template>
   <div class="horizontal-header">
     <div class="horizontal-header-left">
-      <img src="@/assets/login/logo.png" alt="logo" />
+      <img src="@/assets/login/logo.jpg" alt="logo" />
     </div>
     <el-menu
       router

@@ -83,7 +83,7 @@ export const permissionRoutes = [
     redirect: "/table/index",
     meta: {
       icon: orderIcon,
-      title: "订单管理"
+      title: "公共组件"
     },
     children: [
       {
@@ -91,7 +91,7 @@ export const permissionRoutes = [
         name: "TableIndex",
         component: () => import("@/views/table/index.vue"),
         meta: {
-          title: "订单列表"
+          title: "表格"
         }
       }
     ]
